@@ -1,3 +1,13 @@
 {
-  "latest": "announcements/001/readme.md"
+  "latest": "announcements/001/readme.md",
+  "historylist": [
+    {
+      "path": "announcements/001/readme.md",
+      "title": "喵ingTab 1.0.0 正式发布"
+    },
+    {
+      "path": "announcements/002/readme.md",
+      "title": "喵ingTab 1.2.0 正式发布"
+    }
+  ]
 }

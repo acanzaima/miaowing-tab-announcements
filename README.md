@@ -7,16 +7,29 @@ Remote announcements for Miaowing Tab.
 1. Create a new sortable directory under `announcements/`.
 2. Put the announcement Markdown at `readme.md`.
 3. Update `announcements.json` so `latest` points to that Markdown file.
+4. Add the same path to the start of `historylist`, with the title shown in the extension's history menu.
 
 Example:
 
 ```json
 {
-  "latest": "announcements/002/readme.md"
+  "latest": "announcements/002/readme.md",
+  "historylist": [
+    {
+      "path": "announcements/002/readme.md",
+      "title": "Miaowing Tab 1.1.0"
+    },
+    {
+      "path": "announcements/001/readme.md",
+      "title": "Miaowing Tab 1.0.0"
+    }
+  ]
 }
 ```
 
 If `latest` is empty, missing, or `null`, the extension will not show a new announcement.
+Keep `historylist` ordered from newest to oldest and include `latest`. Older extension versions ignore
+this field, while newer versions still support manifests that only contain `latest`.
 
 ## Directory Naming
 
@@ -28,7 +41,7 @@ announcements/002/readme.md
 announcements/003/readme.md
 ```
 
-The `latest` path is also the announcement id. After a user marks
+Each `path` is also the announcement id. After a user marks
 `announcements/002/readme.md` as read, that exact announcement will not show again.
 
 ## Markdown
