@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "configs": {
+    "60s": {
+      "version": 1,
+      "path": "config/60s.v1.json"
+    }
+  }
+}
